@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JOBS2</title>
+    <link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-2.1.3.min.js"></script>
+</head>
+<body>
+
+<p>JOBS2</p>
+
+<h1>職務情報 登録フォーム</h1>
+
+
+<h2>当該職務の内容</h2>
+<form method="post" action="form_post2_jobs2.php">
+    <div>入力日
+        <!-- 年、月、日の選択 -->
+        <div>
+            <!-- セレクトボックス作成[START] -->
+            <select id="year"></select>年
+            <select id="month"></select>月
+            <select id="day"></select>日
+            <!-- セレクトボックス作成[END] -->
+        </div>
+    </div>
+
+    <div>組織コード
+        <input type="text" name="orgcode" size="20">
+    </div>
+
+    <div>所属
+        <input type="text" name="orgname" size="20">
+    </div>
+
+    <div>職位
+        <input type="text" name="title" size="20">
+    </div>
+
+    <div>経営職務グレード
+        <input type="text" name="grade" size="20">
+    </div>
+
+    <div>就任者 従業員番号
+        <input type="text" name="employeeid" size="20">
+    </div>
+
+    <div>就任者 氏名
+        <input type="text" name="employeename" size="20">
+    </div>
+
+    <div>職務情報</div>
+
+<h2>（１）当該職務の役割</h2>
+    <p>当該職務に求められる役割を具体的に記載願います。</p>
+    <p>出向者の場合は、MC及び出向先双方の観点から期待される役割を記載願います。</p>
+        <input type="text" name="mission" size="20">
+    
+
+<h2>（２）定量的情報</h2>
+<p>管下組織の定量情報</p>
+        <input type="text" name="profit" size="20">
+<p>管下組織の従業員数</p>
+        <input type="text" name="employeenum" size="20">
+
+<div>備考
+        <p><input type="text" name="memo" size="20"></p>
+</div>
+
+<p> <input type="submit" value="登録"></p>
+
+</form>
+
+<script>
+//職務情報の手入力
+
+//年:2023~2100
+let yearHTML = "";
+
+for(let i = 2023; i < 2101; i++){
+    yearHTML += `<option value="${i}">${i}</option>`
+}
+$("#year").html(yearHTML);
+
+//月:1~12
+let monthHTML = '';
+for(let i = 1; i<=12; i++){
+    monthHTML += `<option value="${i}">${i}</option>`
+}
+$("#month").html(monthHTML);
+
+//日:1~31
+let dayHTML = "";
+for(let i = 1; i<=31; i++){
+    dayHTML += `<option value="${i}">${i}</option>`
+}
+$("#day").html(dayHTML);
+
+
+//登録ボタンを押すとFirebaseを通してマスタに追加される
+
+//マスタが表示される
+
+//
+
+//ユニークキー（職務コード）を生成する
+
+//職務コードをベースに組織図表示
+
+
+
+</script>
+
+</body>
+
+</html>

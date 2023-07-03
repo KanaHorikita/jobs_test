@@ -1,0 +1,112 @@
+table {
+    border-collapse: collapse;
+    margin-top: 30px;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    font-size: 12px;
+} 
+
+/* スクロールバー */
+.scroll {
+    width: 100%;
+    height: auto;
+    overflow: scroll;
+}
+
+.scroll::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.scroll::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background: rgba(110, 108, 108, 0.2);
+}
+    
+.scroll::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: #8b8686;
+}
+
+/* タブ */
+.menu {
+    color: #555555;
+    height: 50px;
+}
+
+.radio {
+    color: #555555;
+}
+
+.tab {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 500px;
+}
+
+.tab > label {
+    flex: 1 1;
+    order: -1;
+    min-width: 70px;
+    padding: .7em 1em .5em;
+    border-bottom: 1px solid #f0f0f0;
+    border-radius: 0;
+    background-color: #c0daf1;
+    color: #555555;
+    font-size: .9em;
+    text-align: center;
+    cursor: pointer;
+}
+
+.tab > label:hover {
+    opacity: .8;
+}
+
+.tab input {
+    display: none;
+}
+
+.tab > div {
+    display: none;
+    width: 100%;
+    padding: 1.5em 1em;
+    background-color: #fff;
+}
+
+.tab label:has(:checked) {
+    background-color: #fff;
+    border-color: #098ae7 #f0f0f0 #fff;
+    border-style: solid;
+    border-width: 4px 1px 1px;
+    border-radius: 5px;
+    color: #555555;
+}
+
+.tab label:has(:checked) + div {
+    display: block;
+}
+
+#logo {
+    text-align:center;
+    font-weight:normal;
+}
+
+#title {
+    font-size: 50px;
+    color: cornflowerblue;
+    text-align: start;
+    display:block;
+    line-height:50px;
+    letter-spacing:-4px;
+    text-shadow:3px 3px 6px #555555;
+}
+h1 {
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: #555555;
+}
+
